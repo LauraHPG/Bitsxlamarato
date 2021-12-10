@@ -1,3 +1,11 @@
 #include<iostream>
-    asdasd
-xd
+#include<vector>
+
+
+int main(){
+
+
+
+
+    
+}
