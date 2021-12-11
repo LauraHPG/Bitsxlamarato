@@ -9,3 +9,5 @@ Introducció:
 Objectiu:
  - El nostre objectiu és crear una pàgina web que ajudi als estudiants amb TEA a organitzar-se les tasques i entreges acadèmiques.
  - La nostra idea principal és crear un Timeline en la qual l'estudiant afegirà les tasques pendents i el nostre programa li organitzarà segons la prioritat, de manera que tingui un horari ben estructurat i amb el qual podrà finalitzar les tasques en el període de temps adequat.
+
+De moment és una versió molt simple, degut a l'escassetat de temps que hem tingut i a la falta de coneixement per començar.
