@@ -1,3 +1,10 @@
+h1{
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+}
+
+
 div.scrollmenu {
   background-color: rgb(78, 85, 77);
   overflow: auto;
@@ -6,6 +13,10 @@ div.scrollmenu {
   align-items: center;
   text-align: center;
   border-radius: 25px;
+  width: 70em;
+  margin: auto;
+  margin-top: 5em;
+  color: white;
 }
 
 div.scrollmenu a {
@@ -14,9 +25,9 @@ div.scrollmenu a {
   text-align: center;
   text-decoration: none;
   align-items: center;
-  width: 50px;
+  width: 10em;
   height: 40px;
-  padding: 5px 50px;
+  /*padding: 5px 50px;*/
 }
 
 div.scrollmenu div {
@@ -43,5 +54,7 @@ div.scrollmenu a:hover {
 
 .feina{
   background-color: rgb(0, 0, 0);
-  padding: 5px 0px !important;
+  /*padding: 5px 0px !important;*/
+  text-align: center;
 }
+
