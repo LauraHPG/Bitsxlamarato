@@ -1,0 +1,47 @@
+div.scrollmenu {
+  background-color: rgb(78, 85, 77);
+  overflow: auto;
+  white-space: nowrap;
+  height: 30px;
+  align-items: center;
+  text-align: center;
+  border-radius: 25px;
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  align-items: center;
+  width: 50px;
+  height: 40px;
+  padding: 5px 50px;
+}
+
+div.scrollmenu div {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  align-items: center;
+}
+
+div.scrollmenu a:hover {
+  background-color: rgba(119, 119, 119, 0.089);
+}
+
+.example::-webkit-scrollbar {
+  display: none;
+}
+
+.example.scrollmenu {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.feina{
+  background-color: rgb(0, 0, 0);
+  padding: 5px 0px !important;
+}
