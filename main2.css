@@ -1,0 +1,156 @@
+body{
+  overflow:hidden;
+}
+
+h1{
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+}
+
+
+div.scrollmenu {
+  background-color: rgb(78, 85, 77);
+  overflow: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  height: 50px;
+  align-items: center;
+  text-align: center;
+  border-radius: 25px;
+  width: 70em;
+  margin: auto;
+  margin-top: 5em;
+  color: white;
+
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  align-items: center;
+  width: 10em;
+  height: 40px;
+  /*padding: 5px 50px;*/
+}
+
+div.scrollmenu div {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  align-items: center;
+}
+
+div.scrollmenu a:hover {
+  background-color: rgba(119, 119, 119, 0.089);
+}
+
+.example::-webkit-scrollbar {
+  display: none;
+}
+
+.example.scrollmenu {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  color: #fff;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+.btn-menu{
+  position: fixed;
+   top: 0;
+   right: 0;
+   background: #336600;
+   padding: 6px;
+   color: #fff;
+   font-size: 1.4em;
+   margin: 5px;
+   border-radius: 10px;
+}
+
+.informacio{
+  width: 70%;
+  margin: auto;
+}
+
+.inputNom, .inputData, .inputSelect, .titol{
+  height: 40px;
+  width: 90%;
+  margin-left: 5px;
+  margin-bottom: 10px;
+}
+
+.btn-afegir{
+  margin-left: 5px;
+  margin-bottom: 10px;
+}
+
+.feina{
+  background-color: #bae1ff;
+  overflow: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  height: 350px;
+  align-items: center;
+  text-align: center;
+  border-radius: 15px;
+  width: 70%;
+  margin: auto;
+  margin-top: 2em;
+  color: white;
+  font-size: x-large;
+}
