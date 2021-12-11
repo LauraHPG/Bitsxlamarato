@@ -1,12 +1,15 @@
 $(document).ready(function() {
     const d = new Date();
-    let day = d.getDay();
-    let dia =d.getDate();
+    let day = d.getDay(); //dia de la setmana actual
+    let dd =d.getDate(); //num de mes
+    let mm = d.getMonth();
+    let aa = d.getUTCFullYear();
+    
     for(let i = 0; i < 50; ++i){
         
         if(day == 0){
             $('#prova').append(
-                `<a>Diumenge${dia}</a>`);
+                `<a>Diumenge</a>`);
         }else if(day == 1){
             $('#prova').append(
                 `<a>Dilluns</a>`);
@@ -41,3 +44,4 @@ function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("main").style.marginLeft = "0";
 }
+
