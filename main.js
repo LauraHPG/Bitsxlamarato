@@ -70,71 +70,87 @@ function closeNav() {
 
 function horari(aa, mm, dd) {
     $('#tasques2').html("");
+    $('#tasques3').html("");
+    $('#tasques4').html("");
     let examens = [];
-    for (var i = 0; i < 6; ++i) {
-        let dd2 = dd + i;
-        let id3 = aa + "-" + mm + "-" + dd2 + ".2";
-        let tasquesd = localStorage.getItem(id3);
-        for (let j = 0; j < tasquesd.length; ++j) {
-            if (tasquesd[j] == 1) {
-                alert("Examen");
-                $('#tasques2').append(
-                    `<p>${"Examen!jaja"}<br></p>`);
+    for (var i = 1; i <= 7; ++i) {
+        ++dd;
+
+        if((mm==1 || mm==3 || mm==5 || mm==7 || mm==8 || mm==10 || mm==12) && dd==32){
+            ++mm;
+            dd=1;
+        }
+        else if(( mm==4 || mm==6 || mm==9 || mm==11) && dd==31){
+            ++mm;
+            dd=1;
+        }
+        else if(!(aa%100 == 0 && (aa/100)%4 == 0 || aa%100 != 0 && aa%4 == 0) && mm==2 && dd==29){
+            ++mm;
+            dd=1;
+        }
+        else if((aa%100 == 0 && (aa/100)%4 == 0 || aa%100 != 0 && aa%4 == 0) && mm==2 && dd==30){
+            ++mm;
+            dd=1;
+        }
+        if(mm==13){
+            ++aa;
+            mm=1;
+        }
+
+        let id = aa + "-" + mm + "-" + dd;
+        let tasques = JSON.parse(localStorage.getItem(id));
+        console.log(tasques);
+        if (tasques != null) {
+            for (let i = 0; i < tasques.length; ++i) {
+                if (tasques[i] != null && tasques[i].tipus == 1) {
+                    let tas = "#llista-tasques" + i;
+                    $(tas).append(
+                        `<p><br>${tasques[i].nom}</p>`);
+                }
             }
         }
     }
 }
 
 function show_info(aa, mm, dd){
-    $('#tasques').html("");
+
+    $('#llista-tasques').html("");
     let id = aa + "-" + mm + "-" + dd;
-    let id2 = aa + "-" + mm + "-" + dd + ".1";
-    let id3 = aa + "-" + mm + "-" + dd + ".2";
     //alert(id2);
-    var feines = localStorage.getItem(id2);
-    var feines2 = localStorage.getItem(id3);
-    //alert(feines);
-    let ultim = feines[0];
-    let i = 1;
-    while(i < feines.length) {
-        if (feines[i] == "~") {
-            $('#tasques').append(
-                `<p>${ultim}<br></p>`);
-                ultim = "";
-        }
-        else {
-            ultim += feines[i];
-        }
-        ++i;
+    var feines = JSON.parse(localStorage.getItem(id));
+    if (feines != null) {
+    for (let i = 0; i < feines.length; ++i) {
+        $('#llista-tasques').append(
+            `<p>${feines[i].nom}<br></p>`);
     }
-    $('#tasques').append(
-        `<p>${ultim}<br></p>`);
+    }
     horari(aa, mm, dd);
 }
 
 
 function guardarInfo(){
-    
     let nom = document.getElementById("inputId1").value;
     let data = document.getElementById("inputId2").value;
     let tipus = document.getElementById("form").value;
 
-    let d = data + ".1";
-    let d2 = data + ".2";
-    //alert(d1);
-    var x = localStorage.getItem(d);
-    if (x != null) {
-        nom = nom + "~" + x;
-        var y = localStorage.getItem(d2);
-        tipus = tipus + "~" + y;
-    }
-    localStorage.setItem(d, nom);
-    localStorage.setItem(d2, tipus);
-    closeNav();
-    let val = document.getElementById("inputId1").value;
-    if (val.search("Dilluns") != -1) {
+    var tasca = {'nom': nom, 'tipus': tipus};
 
+    let vec = [];
+
+    let x = localStorage.getItem(data);
+    if (x != null) {
+        let y = (JSON.parse(x));
+        y.push(tasca);
+        vec = y;
     }
+    else {
+        vec.push(tasca);
+    }
+    localStorage.setItem(data, JSON.stringify(vec));
+
+    document.getElementById("myForm").reset();
+    closeNav();
+    //console.log(vec, JSON.parse(localStorage.getItem(data)));
 
 }
 /*

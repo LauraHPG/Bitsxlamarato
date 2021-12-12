@@ -21,29 +21,32 @@
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <div class="container">
                 <h2 class="titol">Informació</h2>
-                <div>
-                    <input type="text" placeholder="Nom " id="inputId1" class="inputNom">
-                </div>
+                <form id = myForm>
+                    <div>
+                        <input type="text" placeholder="Nom " id="inputId1" class="inputNom">
+                    </div>
 
-                <div>
-                    <input type="date" placeholder="Data " id="inputId2" class="inputData">
-                </div>
+                    <div>
+                        <input type="date" placeholder="Data " id="inputId2" class="inputData">
+                    </div>
 
 
-                <select id= "form" class="inputSelect" aria-label="Default select example">
-                    <option selected>Sel·lecciona el tipus de tasca</option>
-                    <option value="1">Examen</option>
-                    <option value="2">Treball en grup</option>
-                    <option value="3">Pràctica</option>
-                    <option value="4">Deures</option>
-                </select>
+                    <select id= "form" class="inputSelect" aria-label="Default select example">
+                        <option selected>Sel·lecciona el tipus de tasca</option>
+                        <option value="1">Examen</option>
+                        <option value="2">Treball en grup</option>
+                        <option value="3">Pràctica</option>
+                        <option value="4">Deures</option>
+                    </select>
 
-                <div>
-                    <button type="button" onclick="guardarInfo();" class="btn-afegir">Afegir</button>   
-                </div>
-                
+                    <div>
+                        <button type="button" onclick="guardarInfo();" class="btn-afegir">Afegir</button>
+                    </div>
+                </form>
+
+
             </div>
-            
+
         </div>
 
         <div id="setmana" class="scrollmenu example">
@@ -51,26 +54,30 @@
         </div>
 
         <div id="informacio" class="feina">
-            <div class="container">
-                <div class="row align-items-start">
-                  <div class="col-3" id = "hora1">
-                      Tasques pel dia
-                      <div id="tasques"></div>
-                  </div>
-                  <div class="col-3" id = "hora2">
-                    17:00 - 18:00
-                    <div id="tasques2"></div>
-                  </div>
-                  <div class="col-3" id = "hora3">
-                    18:00 - 19:00
-                    <div id="tasques3"></div>
-                  </div>
-                  <div class="col-3" id = "hora4">
-                    19:00 - 20:00
-                    <div id="tasques4"></div>
-                  </div>
+            <span class="col-3 titol-tasques qwer" id="tasques">
+                <div>
+                    Tasques pel dia
+                    <div id="llista-tasques"></div>
                 </div>
-              </div>
+            </span>
+            <span class="col-9 prova qwer">
+                <div class="col-3" id = "hora1">
+                        16:00 - 17:00
+                    <div id="tasques1"></div>
+                </div>
+                <div class="col-3" id = "hora2">
+                        17:00 - 18:00
+                    <div id="tasques2"></div>
+                </div>
+                    <div class="col-3" id = "hora3">
+                        18:00 - 19:00
+                    <div id="tasques3"></div>
+                </div>
+                    <div class="col-3" id = "hora4">
+                        19:00 - 20:00
+                    <div id="tasques4"></div>
+                </div>
+            </span>
         </div>
 
         <button class="btn-menu" onclick="openNav()">Afegir</button>
