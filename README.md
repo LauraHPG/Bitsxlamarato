@@ -11,3 +11,9 @@ Objectiu:
  - La nostra idea principal és crear un Timeline en la qual l'estudiant afegirà les tasques pendents i el nostre programa li organitzarà segons la prioritat, de manera que tingui un horari ben estructurat i amb el qual podrà finalitzar les tasques en el període de temps adequat.
 
 De moment és una versió molt simple, a causa de l'escassetat de temps que hem tingut i a la falta de coneixement actual.
+
+Fet per:
+   - Ignasi Juez
+   - Laura Hui Pérez
+   - Pere Carrillo
+   - Sergio Blanco
