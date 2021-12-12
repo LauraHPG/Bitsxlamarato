@@ -12,6 +12,7 @@ Objectiu:
 
 Link:
 - https://fervent-heisenberg-2bd695.netlify.app/
+
 De moment és una versió molt simple, a causa de l'escassetat de temps que hem tingut i a la falta de coneixement actual.
 
 Fet per:
